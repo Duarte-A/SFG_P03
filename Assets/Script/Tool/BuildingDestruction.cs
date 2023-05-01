@@ -111,7 +111,7 @@ public class BuildingDestruction : MonoBehaviour
         else
         {
             _undamaged.SetActive(false);
-        if (_buildingHealth <= 2 ||  _buildingHealth >= 1)
+        if (_buildingHealth >= 1)
         {
             _isUndamaged = false;
             _isDamaged = true;
@@ -119,7 +119,7 @@ public class BuildingDestruction : MonoBehaviour
             Debug.Log("Damaged");
             if (_isDamaged == true)
             {
-                bool undamagedBool = _isDamaged == false;
+                bool undamagedBool = _isDamaged == true;
                 bool ruinsBool = _isRuined == false;
                 _undamaged.SetActive(false);
                 _damaged.SetActive(true);
@@ -131,7 +131,7 @@ public class BuildingDestruction : MonoBehaviour
             }
         }
 
-        if (_buildingHealth <= 0)
+        if (_buildingHealth <=0)
         {
             _isUndamaged = false;
             _isDamaged = false;
@@ -140,7 +140,7 @@ public class BuildingDestruction : MonoBehaviour
             if (_isRuined == true)
             {
                 bool undamagedBool = _isDamaged == false;
-                bool damagedBool = _isRuined == false;
+                bool damagedBool = _isRuined == true;
                 _undamaged.SetActive(false);
                 _damaged.SetActive(false);
                 _ruins.SetActive(true);

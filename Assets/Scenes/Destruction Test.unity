@@ -136,35 +136,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.4865
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27349997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: 0.0175
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.50000006
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.50000006
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279506708818457731, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6bd60107964a2945bbecf9cd0c83636, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6bd60107964a2945bbecf9cd0c83636, type: 3}
@@ -593,7 +593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98636113b0d1c564987ae651e7762994, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98636113b0d1c564987ae651e7762994, type: 3}
@@ -803,8 +803,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1384259143665561501, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384259143665561501, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1384259143665561501, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
       propertyPath: InitialModule.startSizeY.scalar
@@ -831,6 +835,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1384259143665561501, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384259143665561501, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[1].time
+      value: 0.6133994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384259143665561501, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].value
+      value: 0.61459535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384259143665561501, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
       propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[1].value
       value: 1
       objectReference: {fileID: 0}
@@ -849,6 +865,10 @@ PrefabInstance:
     - target: {fileID: 8294049868628463392, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294049868628463392, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
