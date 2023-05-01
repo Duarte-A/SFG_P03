@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6bd60107964a2945bbecf9cd0c83636, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6bd60107964a2945bbecf9cd0c83636, type: 3}
@@ -593,7 +593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98636113b0d1c564987ae651e7762994, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98636113b0d1c564987ae651e7762994, type: 3}
@@ -924,11 +924,9 @@ MonoBehaviour:
   _undamaged: {fileID: 980116669}
   _isUndamaged: 1
   _damaged: {fileID: 638525627}
-  _isDamaged: 0
   _smoke: {fileID: 8294049868628463392, guid: 67f035eb84a3ff543bfdce47dad73f8d, type: 3}
   _canExplodeOnTimer: 0
   _ruins: {fileID: 692061891}
-  _isRuined: 0
   _explosion: {fileID: 8294049868628463392, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
   _fire: {fileID: 8294049868628463392, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
 --- !u!1001 &1956903831
