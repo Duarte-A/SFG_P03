@@ -20,6 +20,9 @@ public class BuildingDestruction : MonoBehaviour
 
     //optional timer
     public bool _canExplodeOnTimer;
+    [SerializeField] public float timeRemaining;
+
+
 
 
     [Header("Ruins State")]
@@ -79,6 +82,10 @@ public class BuildingDestruction : MonoBehaviour
                 _undamaged.SetActive(false);
                 _damaged.SetActive(true);
                 _ruins.SetActive(false);
+                    if (_canExplodeOnTimer)
+                    {
+                        DamagedExplosionTimer();
+                    }
             }
             else
             {
@@ -117,4 +124,21 @@ public class BuildingDestruction : MonoBehaviour
         _buildingHealth -= damage;
     }
 
+    public void DamagedExplosionTimer()
+    {
+        if (_canExplodeOnTimer)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                _buildingHealth = 0;
+                timeRemaining = 0;
+                _canExplodeOnTimer = false;
+            }
+        }
+    }
 }
+

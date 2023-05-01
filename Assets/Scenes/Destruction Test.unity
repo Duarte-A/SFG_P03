@@ -926,6 +926,7 @@ MonoBehaviour:
   _damaged: {fileID: 638525627}
   _smoke: {fileID: 8294049868628463392, guid: 67f035eb84a3ff543bfdce47dad73f8d, type: 3}
   _canExplodeOnTimer: 0
+  timeRemaining: 5
   _ruins: {fileID: 692061891}
   _explosion: {fileID: 8294049868628463392, guid: 2407e72bfc64307419a0eb49d8c6cd76, type: 3}
   _fire: {fileID: 8294049868628463392, guid: 78009b16098123249812d7f866b7c9ae, type: 3}
