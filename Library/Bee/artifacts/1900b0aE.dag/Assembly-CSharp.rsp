@@ -351,10 +351,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Script/Non-Tool/CustomBullet.cs"
-"Assets/Script/Non-Tool/EnemyAI.cs"
-"Assets/Script/Non-Tool/Health.cs"
-"Assets/Script/Non-Tool/Shootable.cs"
 "Assets/Script/Tool/BuildingDestruction.cs"
 -langversion:9.0
 

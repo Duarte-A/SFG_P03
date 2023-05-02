@@ -11,6 +11,9 @@ public class BuildingDestruction : MonoBehaviour
 
     [Header("Undamaged State")]
     [SerializeField] GameObject _undamaged;
+
+    //Leave checked if you want the building to look undamaged,
+    //uncheck it and lower the health below 3 if you want it to look damaged in any way
     public bool _isUndamaged;
 
     [Header("Damaged State")]
@@ -49,6 +52,8 @@ public class BuildingDestruction : MonoBehaviour
 
     private void Update()
     {
+        //For testing, this can manually change the health value by 1 int on all objects with
+        //this script attached to it
         if (Input.GetKeyDown(KeyCode.A))
         {
             TakeDamage(1);
@@ -63,7 +68,7 @@ public class BuildingDestruction : MonoBehaviour
         HealthCheck();
     }
 
-    //Single Bool Check Function Below
+    //Health Check Function Below
 
     public void HealthCheck()
     {
@@ -135,13 +140,14 @@ public class BuildingDestruction : MonoBehaviour
 
     }
 
-    //Health
+    //Reduces Building Health
 
     void TakeDamage(int damage)
     {
         _buildingHealth -= damage;
     }
 
+    //Function for changing building to 'Ruined' building mesh
     public void DamagedExplosionTimer()
     {
         if (_canExplodeOnTimer)
@@ -159,14 +165,7 @@ public class BuildingDestruction : MonoBehaviour
         }
     }
 
-    public void ExplosionDamage()
-    {
-        _explosionSphere.enabled = true;
-        TakeDamage(1);
-        _explosionSphere.enabled = false;
-        Debug.Log("Boom!");
-    }
- 
+    //Coroutine for enabling the explosion damage radius for 2 seconds
     IEnumerator BuildingExplosion()
     {
         _explosionSphere.enabled = true;
@@ -177,7 +176,8 @@ public class BuildingDestruction : MonoBehaviour
     }
 
 
-
+    //Explosion sphere collider detects if the object it overlaps has
+    //'BuildingDestruction' script, like this building object
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent(out BuildingDestruction _building))
@@ -185,7 +185,6 @@ public class BuildingDestruction : MonoBehaviour
             _building.TakeDamage(1);
         Debug.Log("TriggerDamage");
         }
-        
     }
 }
 
