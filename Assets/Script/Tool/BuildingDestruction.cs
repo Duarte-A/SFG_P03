@@ -28,12 +28,24 @@ public class BuildingDestruction : MonoBehaviour
     [Header("Ruins State")]
     [SerializeField] GameObject _ruins;
     private bool _isRuined;
-    public GameObject _explosion;
-    //add explosion damage and damage radius
-    public GameObject _fire;
+    public GameObject _fireFX;
 
+    //Explosion effect
+    public GameObject _explosionFX;
+    //Optional explosion damage and damage area size
+    public bool _canExplodeAndDamage = false;
+    private SphereCollider _explosionSphere;
+    //BuildingToDamage
+    private BuildingDestruction buildingObject;
+
+    //FixedUpdate Variable
     private float fixedUpdateCount = 0;
 
+    private void Start()
+    {
+        _explosionSphere = GetComponent<SphereCollider>();
+        _explosionSphere.enabled = false;
+    }
 
     private void Update()
     {
@@ -95,6 +107,12 @@ public class BuildingDestruction : MonoBehaviour
 
         if (_buildingHealth <=0)
         {
+                if (_canExplodeAndDamage)
+                {
+                    //ExplosionDamage();
+                    _canExplodeAndDamage = true;
+                    StartCoroutine(BuildingExplosion());
+                }
             _isUndamaged = false;
             _isDamaged = false;
             _isRuined = true;
@@ -139,6 +157,35 @@ public class BuildingDestruction : MonoBehaviour
                 _canExplodeOnTimer = false;
             }
         }
+    }
+
+    public void ExplosionDamage()
+    {
+        _explosionSphere.enabled = true;
+        TakeDamage(1);
+        _explosionSphere.enabled = false;
+        Debug.Log("Boom!");
+    }
+ 
+    IEnumerator BuildingExplosion()
+    {
+        _explosionSphere.enabled = true;
+        yield return new WaitForSeconds(2f);
+        _explosionSphere.enabled = false;
+        _canExplodeAndDamage = false;
+        Debug.Log("BuildingExplosion");
+    }
+
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out BuildingDestruction _building))
+        {
+            _building.TakeDamage(1);
+        Debug.Log("TriggerDamage");
+        }
+        
     }
 }
 

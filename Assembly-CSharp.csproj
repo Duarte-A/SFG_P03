@@ -60,6 +60,7 @@
     <Compile Include="Assets\Script\Non-Tool\Health.cs" />
     <Compile Include="Assets\Script\Tool\BuildingDestruction.cs" />
     <Compile Include="Assets\Script\Non-Tool\EnemyAI.cs" />
+    <Compile Include="Assets\Script\Non-Tool\CustomBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
